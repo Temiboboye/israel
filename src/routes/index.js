@@ -28,3 +28,7 @@ export const FashionCollection = loadable(() => import("../pages/fashion/collect
 export const FashionDesign = loadable(() => import("../pages/fashion/design"),{
     LoadingComponent: Loading
 });
+
+export const Others = loadable(() => import("../pages/others"),{
+    LoadingComponent: Loading
+});

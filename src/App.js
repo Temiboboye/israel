@@ -13,6 +13,7 @@ function App() {
           <Route exact path="/portfolio/fashion" component={Pages.Fashion} />
           <Route path="/portfolio/fashion/collections" component={Pages.FashionCollection} />
           <Route path="/portfolio/fashion/design" component={Pages.FashionDesign} />
+          <Route exact path="/portfolio/others" component={Pages.Others} />
         </Switch>
       </Router>
     );

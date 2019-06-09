@@ -290,8 +290,11 @@ export const ImageBox = styled.div`
     }
     @media only screen and (max-width: 670px) {
         flex-basis: 48.5%;
-        margin-bottom: 7px;  
-        height: 200px;
+        margin-bottom: 7px; 
+        height: 200px; 
+        p {
+            font-size: 20px;
+        }
     }
 `
 
@@ -312,6 +315,26 @@ export const ImageBox3 = styled.div`
         flex-basis: 48.5%;
         margin-bottom: 7px;  
         height: 200px;
+    }
+`
+
+export const ImageBox4 = styled.div`
+    flex-basis: 31%;
+    height: 248px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    position: relative;
+    border: 1px solid ${colors.dark};
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+    cursor: pointer;
+    @media only screen and (max-width: 670px) {
+        /* flex-basis: 48.5%; */
+        margin-bottom: 7px;  
+        height: 140px;
     }
 `
 

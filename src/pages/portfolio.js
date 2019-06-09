@@ -15,7 +15,7 @@ function Portfolio(props) {
                     <ImageBox style={{backgroundImage: `url(${require('../assets/images/art.png')})`}}>
                         <p>ART</p>
                     </ImageBox>
-                    <ImageBox style={{backgroundImage: `url(${require('../assets/images/others.png')})`}}>
+                    <ImageBox style={{backgroundImage: `url(${require('../assets/images/others.png')})`}} onClick={()=>props.history.push('/portfolio/others')}>
                         <p>OTHER WORKS</p>
                     </ImageBox>
                 </div>
