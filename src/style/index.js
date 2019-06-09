@@ -318,6 +318,38 @@ export const ImageBox3 = styled.div`
     }
 `
 
+export const ImageBox5 = styled.div`
+    flex-basis: 48.5%;
+    height: 248px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    position: relative;
+    border: 1px solid ${colors.dark};
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+    cursor: pointer;
+    p {
+        margin: 0;
+        font-size: 24px;
+        color: white;
+        font-weight: 700;
+        letter-spacing: 2px;
+        position: absolute;
+        text-align: center;
+    }
+    @media only screen and (max-width: 670px) {
+        flex-basis: 48.5%;
+        margin-bottom: 7px;  
+        height: 200px;
+        p {
+            font-size: 20px;
+        }
+    }
+`
+
 export const ImageBox4 = styled.div`
     flex-basis: 31%;
     height: 248px;

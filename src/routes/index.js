@@ -32,3 +32,7 @@ export const FashionDesign = loadable(() => import("../pages/fashion/design"),{
 export const Others = loadable(() => import("../pages/others"),{
     LoadingComponent: Loading
 });
+
+export const Archive = loadable(() => import("../pages/archive"),{
+    LoadingComponent: Loading
+});

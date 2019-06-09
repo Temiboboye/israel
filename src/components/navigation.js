@@ -18,7 +18,7 @@ export default class Navigation extends Component {
                     <Link to="/">HOME</Link>
                     <Link to="/about">ABOUT</Link>
                     <Link to="/portfolio">PORTFOLIO</Link>
-                    <Link to="/">ARCHIVE</Link>
+                    <Link to="/archive">ARCHIVE</Link>
                     <Link to="/connect">CONNECT</Link>
                 </NavContent>
                 <NavContentMobile>
@@ -32,7 +32,7 @@ export default class Navigation extends Component {
                         <Link to="/">HOME</Link>
                         <Link to="/about">ABOUT</Link>
                         <Link to="/portfolio">PORTFOLIO</Link>
-                        <Link to="/">ARCHIVE</Link>
+                        <Link to="/archive">ARCHIVE</Link>
                         <Link to="/connect" className="last-link">CONNECT</Link>
                         <div className="social">
                             <img src={require('../assets/images/social/ig.svg')} alt="IG" />

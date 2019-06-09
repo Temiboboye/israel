@@ -10,6 +10,7 @@ function App() {
           <Route path="/about" component={Pages.About} />
           <Route path="/connect" component={Pages.Connect} />
           <Route exact path="/portfolio" component={Pages.Portfolio} />
+          <Route exact path="/archive" component={Pages.Archive} />
           <Route exact path="/portfolio/fashion" component={Pages.Fashion} />
           <Route path="/portfolio/fashion/collections" component={Pages.FashionCollection} />
           <Route path="/portfolio/fashion/design" component={Pages.FashionDesign} />
