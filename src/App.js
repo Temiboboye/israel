@@ -9,7 +9,10 @@ function App() {
           <Route exact path="/" component={Pages.Home} />
           <Route path="/about" component={Pages.About} />
           <Route path="/connect" component={Pages.Connect} />
-          <Route path="/portfolio" component={Pages.Portfolio} />
+          <Route exact path="/portfolio" component={Pages.Portfolio} />
+          <Route exact path="/portfolio/fashion" component={Pages.Fashion} />
+          <Route path="/portfolio/fashion/collections" component={Pages.FashionCollection} />
+          <Route path="/portfolio/fashion/design" component={Pages.FashionDesign} />
         </Switch>
       </Router>
     );

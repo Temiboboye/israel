@@ -11,6 +11,7 @@ export const Body = styled.div`
     display: flex;
     flex-direction: column;
     .title {
+        font-size: 28px;
         padding: 0 100px;
         @media only screen and (max-width: 938px) {
             padding: 0 50px;      
@@ -239,6 +240,7 @@ export const PortfolioContent = styled.div`
         width: 100%;
         display: flex;
         justify-content: space-between;
+        flex-wrap: wrap;  
         div:before{
             position: absolute;
             content:" ";
@@ -250,6 +252,15 @@ export const PortfolioContent = styled.div`
             z-index:0;
             background-color: rgba(0,0,0,0.45);
         }
+        @media only screen and (max-width: 670px) {
+            flex-wrap: wrap;    
+        }
+    }
+    .wrapper2 {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;  
         @media only screen and (max-width: 670px) {
             flex-wrap: wrap;    
         }
@@ -280,6 +291,62 @@ export const ImageBox = styled.div`
     @media only screen and (max-width: 670px) {
         flex-basis: 48.5%;
         margin-bottom: 7px;  
+        height: 200px;
+    }
+`
+
+export const ImageBox3 = styled.div`
+    flex-basis: 31%;
+    height: 248px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    position: relative;
+    border: 1px solid ${colors.dark};
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+    cursor: pointer;
+    @media only screen and (max-width: 670px) {
+        flex-basis: 48.5%;
+        margin-bottom: 7px;  
+        height: 200px;
+    }
+`
+
+
+
+export const ImageBox2 = styled.div`
+    flex-basis: 100%;
+    height: 248px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    position: relative;
+    margin-bottom: 20px;
+    border: 1px solid ${colors.dark};
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    cursor: pointer;
+    p {
+        margin: 0;
+        font-size: 24px;
+        color: white;
+        font-weight: 700;
+        letter-spacing: 2px;
+        z-index: 999999;
+        text-align: center;
+        margin-bottom: 5px;
+    }
+    .sub {
+        font-size: 16px;
+        font-weight: 400;
+        letter-spacing: 0;
+    }
+    @media only screen and (max-width: 670px) {
         height: 200px;
     }
 `

@@ -16,3 +16,15 @@ export const Connect = loadable(() => import("../pages/connect"),{
 export const Portfolio = loadable(() => import("../pages/portfolio"),{
     LoadingComponent: Loading
 });
+
+export const Fashion = loadable(() => import("../pages/fashion"),{
+    LoadingComponent: Loading
+});
+
+export const FashionCollection = loadable(() => import("../pages/fashion/collections"),{
+    LoadingComponent: Loading
+});
+
+export const FashionDesign = loadable(() => import("../pages/fashion/design"),{
+    LoadingComponent: Loading
+});
