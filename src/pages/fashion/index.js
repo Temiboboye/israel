@@ -2,6 +2,7 @@ import React from 'react';
 import { Body, PortfolioContent, ImageBox } from '../../style';
 import Navigation from '../../components/navigation';
 import { Link } from 'react-router-dom';
+import Fashion_Route from './route';
 
 function Fashion(props) {
     return (
@@ -10,15 +11,13 @@ function Fashion(props) {
             <h1 className="title"><Link to="/portfolio">PORTFOLIO</Link> / FASHION</h1>
             <PortfolioContent>
                 <div className="wrapper">
-                    <ImageBox style={{backgroundImage: `url(${require('../../assets/images/fashion.png')})`}} onClick={()=>props.history.push('/portfolio/fashion/design')}>
-                        <p>FASHION DESIGN</p>
-                    </ImageBox>
-                    <ImageBox style={{backgroundImage: `url(${require('../../assets/images/art.png')})`}}>
-                        <p>FASHION ILLUSTRATIONS</p>
-                    </ImageBox>
-                    <ImageBox style={{backgroundImage: `url(${require('../../assets/images/others.png')})`}} onClick={()=>props.history.push('/portfolio/fashion/collections')}>
-                        <p>COLLECTIONS</p>
-                    </ImageBox>
+                    {Fashion_Route.map((r,i)=>{
+                        return (
+                            <ImageBox key={i} style={{backgroundImage: `url(${require(`../../assets/images/fashion/${r.id}/1.png`)})`}} onClick={()=>props.history.push(`/portfolio/fashion/${r.id}`)}>
+                                <p>FASHION {r.title.toUpperCase()}</p>
+                            </ImageBox>
+                        )
+                    })}
                 </div>
             </PortfolioContent>
         </Body>

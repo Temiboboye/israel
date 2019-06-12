@@ -4,24 +4,18 @@ import Navigation from '../../components/navigation';
 import { Link } from 'react-router-dom';
 
 function Others() {
+    const imagelist = [1,2,3];
     return (
         <Body>
             <Navigation />
-            <h1 className="title"><Link to="/portfolio">PORTFOLIO</Link> / OTHERS</h1>
+            <h1 className="pagination"><Link to="/portfolio">PORTFOLIO</Link> / OTHERS</h1>
             <PortfolioContent>
                 <div className="wrapper2">
-                    <ImageBox4 style={{backgroundImage: `url(${require('../../assets/images/fashion.png')})`}} />
-                    <ImageBox4 style={{backgroundImage: `url(${require('../../assets/images/art.png')})`}} />
-                    <ImageBox4 style={{backgroundImage: `url(${require('../../assets/images/others.png')})`}} />
-                    <ImageBox4 style={{backgroundImage: `url(${require('../../assets/images/fashion.png')})`}} />
-                    <ImageBox4 style={{backgroundImage: `url(${require('../../assets/images/art.png')})`}} />
-                    <ImageBox4 style={{backgroundImage: `url(${require('../../assets/images/others.png')})`}} />
-                    <ImageBox4 style={{backgroundImage: `url(${require('../../assets/images/fashion.png')})`}} />
-                    <ImageBox4 style={{backgroundImage: `url(${require('../../assets/images/art.png')})`}} />
-                    <ImageBox4 style={{backgroundImage: `url(${require('../../assets/images/others.png')})`}} />
-                    <ImageBox4 style={{backgroundImage: `url(${require('../../assets/images/fashion.png')})`}} />
-                    <ImageBox4 style={{backgroundImage: `url(${require('../../assets/images/art.png')})`}} />
-                    <ImageBox4 style={{backgroundImage: `url(${require('../../assets/images/others.png')})`}} />
+                    {imagelist.map((image,index)=>{
+                        return (
+                            <ImageBox4 key={index} style={{backgroundImage: `url(${require(`../../assets/images/others/${image}.png`)})`}} />
+                        )
+                    })}
                 </div>
             </PortfolioContent>
         </Body>

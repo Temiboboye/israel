@@ -20,6 +20,16 @@ export const Body = styled.div`
             padding: 0 10px;      
         }
     }
+    .pagination {
+        font-size: 20px;
+        padding: 0 100px;
+        @media only screen and (max-width: 938px) {
+            padding: 0 50px;      
+        }
+        @media only screen and (max-width: 837px) {
+            padding: 0 10px;      
+        }
+    }
 `
 
 export const Content = styled.div`
@@ -274,7 +284,6 @@ export const ImageBox = styled.div`
     background-repeat: no-repeat;
     background-position: center;
     position: relative;
-    border: 1px solid ${colors.dark};
     display: flex;
     align-items: center;
     justify-content: center;
@@ -299,22 +308,20 @@ export const ImageBox = styled.div`
 `
 
 export const ImageBox3 = styled.div`
-    flex-basis: 31%;
-    height: 248px;
+    flex-basis: 49.5%;
+    height: 601px;
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
     position: relative;
-    border: 1px solid ${colors.dark};
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-bottom: 20px;
+    margin-bottom: 7px;
     cursor: pointer;
     @media only screen and (max-width: 670px) {
-        flex-basis: 48.5%;
-        margin-bottom: 7px;  
-        height: 200px;
+        margin-bottom: 3px;
+        height: 301px;  
     }
 `
 
@@ -351,26 +358,22 @@ export const ImageBox5 = styled.div`
 `
 
 export const ImageBox4 = styled.div`
-    flex-basis: 31%;
+    flex-basis: 32.5%;
     height: 248px;
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
     position: relative;
-    border: 1px solid ${colors.dark};
     display: flex;
     align-items: center;
     justify-content: center;
     margin-bottom: 20px;
     cursor: pointer;
     @media only screen and (max-width: 670px) {
-        /* flex-basis: 48.5%; */
         margin-bottom: 7px;  
-        height: 140px;
+        height: 193px;
     }
 `
-
-
 
 export const ImageBox2 = styled.div`
     flex-basis: 100%;

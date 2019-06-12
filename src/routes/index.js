@@ -21,7 +21,7 @@ export const Fashion = loadable(() => import("../pages/fashion"),{
     LoadingComponent: Loading
 });
 
-export const FashionCollection = loadable(() => import("../pages/fashion/collections"),{
+export const FashionCollections = loadable(() => import("../pages/fashion/collections"),{
     LoadingComponent: Loading
 });
 
