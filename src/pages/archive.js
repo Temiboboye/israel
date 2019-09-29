@@ -8,12 +8,14 @@ function Archive(props) {
             <Navigation />
             <h1 className="title">ARCHIVE</h1>
             <PortfolioContent>
-                <div className="wrapper">
-                    <ImageBox5 style={{backgroundImage: `url(${require('../assets/images/fashion.png')})`}}>
+                <div className="wrapper4">
+                    <ImageBox5 onClick={()=>props.history.push('/archive/fashion')}>
                         <p>FASHION COLLECTIONS</p>
+                        <span>Series of previous fashion collections, designed by Isa Israel</span>
                     </ImageBox5>
-                    <ImageBox5 style={{backgroundImage: `url(${require('../assets/images/art.png')})`}}>
+                    <ImageBox5 onClick={()=>props.history.push('/archive/photography')}>
                         <p>PHOTOGRAPHY</p>
+                        <span>Series of iphone photography, shot and edited by Isa Israel</span>
                     </ImageBox5>
                 </div>
             </PortfolioContent>

@@ -10,10 +10,10 @@ function Fashion(props) {
             <Navigation />
             <h1 className="title"><Link to="/portfolio">PORTFOLIO</Link> / FASHION</h1>
             <PortfolioContent>
-                <div className="wrapper">
+                <div className="wrapper3">
                     {Fashion_Route.map((r,i)=>{
                         return (
-                            <ImageBox key={i} style={{backgroundImage: `url(${require(`../../assets/images/fashion/${r.id}/1.png`)})`}} onClick={()=>props.history.push(`/portfolio/fashion/${r.id}`)}>
+                            <ImageBox key={i} style={{backgroundColor: '#FAF57F' }} onClick={()=>props.history.push(`/portfolio/fashion/${r.id}`)}>
                                 <p>FASHION {r.title.toUpperCase()}</p>
                             </ImageBox>
                         )

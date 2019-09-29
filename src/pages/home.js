@@ -4,12 +4,11 @@ import { Body, HomeContent, FeaturedAlbumArt, Button1 } from '../style';
 
 function Home(props) {
     return (
-        <Body>
-            <Navigation />
+        <Body color="#FE1E03">
+            <Navigation color="#FFF" />
             <HomeContent>
                 <FeaturedAlbumArt className="animated fadeInUp">
-                    <h1>I’M ISA ISRAEL</h1>
-                    <Button1 onClick={()=>props.history.push('/portfolio')}>VIEW MY WORK</Button1>
+                    <Button1 onClick={()=>props.history.push('/portfolio')}>VIEW</Button1>
                 </FeaturedAlbumArt>
             </HomeContent>
         </Body>

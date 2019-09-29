@@ -10,8 +10,10 @@ function About(props) {
             <AboutContent className="animated fadeIn delay-1s">
                 <AboutImage />
                 <AboutText>
-                    <p>Isa Israel’s work is driven by contemporary femininity and can be seen in Vanity Fair, The Coveteur, Hunger Magazine, Elle Canada, Toronto Life, MTV and Vice. His portfolio traverses effortless glamour and modern cool, with an injection of pop and youth culture.</p>
-                    <p>His discerning eye and collaborative attitude are highly regarded among her advertising clients which include Adidas, Birks, L'Oréal, McDonald's, Reebok, Samsung, Stuart Weitzman, and Puma. Skye is also known for bringing the innate style of her subjects to life and works regularly with record labels Arts &amp; Crafts, Universal Music, and Warner Music.</p>
+                    <p>Isa Israel’s work is driven by contemporary & abstract minimalism, Esoteric Aesthetics and modern cool, with an injection of pop and youth culture.</p>
+                    <p>The designer & artistic director got his break into the industry, managing styling & Personal shopping for celebrities such as Runtown, Mr Eazi, Dj Neptune, Yung 6ix, Do2dtun, Sarz, Wizkid & Davido.</p> 
+                    <p>Isa Israel is the founder of TVSTEMVKERS, a creative studio & apparel production company where he maintains the roles of creative direction & design development.</p>
+                    <p>He currently serves as Owner & Chief buyer at 7 SVPPLY, a multi-brand retail outlet & online store, Isa Israel has been at the forefront of urban & streetwear culture in Nigeria, known not  just for his discerning eye in coveted footwear & clothing items from reputable international brands but also to have been a part of the pioneering new-gen streetwear designers in Nigeria.</p>
                     <div className="button-group">
                         <Button1 stroke="#4B4B4B" width="48%" onClick={()=>props.history.push('/portfolio')}>VIEW WORK</Button1>
                         <Button1 stroke="#4B4B4B" width="48%" onClick={()=>props.history.push('/connect')}>CONNECT</Button1>

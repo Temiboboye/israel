@@ -10,9 +10,14 @@ export const Body = styled.div`
     min-height: 100vh;
     display: flex;
     flex-direction: column;
+    background-color: ${props=>props.color};
     .title {
-        font-size: 28px;
+        font-size: 20px;
         padding: 0 100px;
+        a {
+            text-decoration: none;
+            color: #676767;
+        }
         @media only screen and (max-width: 938px) {
             padding: 0 50px;      
         }
@@ -23,6 +28,21 @@ export const Body = styled.div`
     .pagination {
         font-size: 20px;
         padding: 0 100px;
+        a {
+            text-decoration: none;
+            color: #676767;
+        }
+        @media only screen and (max-width: 938px) {
+            padding: 0 50px;      
+        }
+        @media only screen and (max-width: 837px) {
+            padding: 0 10px;      
+        }
+    }
+    .title2 {
+        font-size: 20px;
+        padding: 0 240px;
+        text-align: center;
         @media only screen and (max-width: 938px) {
             padding: 0 50px;      
         }
@@ -31,6 +51,10 @@ export const Body = styled.div`
         }
     }
 `
+
+Body.defaultProps = {
+    color: '#FFF'
+}
 
 export const Content = styled.div`
     flex: 1;
@@ -65,7 +89,7 @@ export const Button1 = styled.button`
 `
 
 Button1.defaultProps = {
-    "width": "326px",
+    "width": "200px",
     "height": "59.2px",
     "stroke": "#FFFFFF"
 }
@@ -78,9 +102,17 @@ export const HomeContent = styled.div`
     align-items: center;
     justify-content: center;
     padding: 0 20px;
+    background-color: #FE1E03 !important;
+    background: url(${require('../assets/images/featuredart2.png')});
+    background-position: left bottom;
+    background-size: 50%;
+
+    background-repeat: no-repeat;
     @media only screen and (max-width: 464px) {
         align-items: flex-start; 
-        padding-top: 40px;    
+        padding-top: 40px;   
+        background-size: 100%;
+        background-position: left 80%;
     }
 `
 
@@ -91,10 +123,6 @@ export const FeaturedAlbumArt = styled.div`
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    background: url(${require('../assets/images/featuredart.jpg')});
-    background-position: center;
-    background-size: contain;
-    background-repeat: no-repeat;
     h1 {
         color: white;
         font-size: 48px;
@@ -125,9 +153,9 @@ export const AboutContent = styled.div`
 `
 
 export const AboutImage = styled.div`
-    flex-basis: 40%;
+    flex-basis: 25%;
     height: 511.37px;
-    background: url(${require('../assets/images/person.jpg')});
+    background: url(${require('../assets/images/person.jpeg')});
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -138,7 +166,7 @@ export const AboutImage = styled.div`
 `
 
 export const AboutText = styled.div`
-    flex-basis: 60%;
+    flex-basis: 75%;
     padding: 0 30px;
     font-size: 20px;
     color: ${colors.dark};
@@ -202,13 +230,15 @@ export const ConnectContent = styled.div`
     }
 `
 
-export const SocialBox = styled.div`
+export const SocialBox = styled.a`
     flex-basis: 100%;
     height: 60px;
     border: 2px solid ${colors.dark};
     background: transparent;
     margin-bottom: 25px;
     display: flex;
+    text-decoration: none;
+    color: #000;
     align-items: center;
     justify-content: space-between;
     padding: 0 29px;
@@ -217,18 +247,18 @@ export const SocialBox = styled.div`
         background: rgba(245,245,245,1)
     }
     img {
-        width: 30px;
-        height: 30px;
+        width: 20px;
+        height: 20px;
         object-fit: contain;
     }
     .arrow {
-        width: 26px;
-        height: 24px;
+        width: 20px;
+        height: 18px;
         object-fit: contain;
     }
     p {
         margin: 0;
-        font-size: 24px;
+        font-size: 18px;
     }
 `
 
@@ -249,9 +279,12 @@ export const PortfolioContent = styled.div`
     .wrapper {
         width: 100%;
         display: flex;
-        justify-content: space-between;
+        /* justify-content: space-between; */
         flex-wrap: wrap;  
-        div:before{
+        div {
+            margin-right: 20px;
+        }
+        /* div:before{
             position: absolute;
             content:" ";
             top:0;
@@ -261,6 +294,34 @@ export const PortfolioContent = styled.div`
             display: block;
             z-index:0;
             background-color: rgba(0,0,0,0.45);
+        } */
+        @media only screen and (max-width: 670px) {
+            flex-wrap: wrap;    
+        }
+    }
+    .wrapper3 {
+        width: 100%;
+        display: flex;
+        /* justify-content: space-between; */
+        flex-wrap: wrap;  
+        div {
+            margin-right: 20px;
+        }
+        div:before{
+            position: absolute;
+            content:" ";
+            top:0;
+            left:0;
+            width:100%;
+            height:100%;
+            display: block;
+            z-index:0;
+            /* background-color: rgba(0,0,0,0.45); */
+        }
+        p {
+            color: #333 !important;
+            font-size: 14px;
+            z-index: 999999999999
         }
         @media only screen and (max-width: 670px) {
             flex-wrap: wrap;    
@@ -274,15 +335,50 @@ export const PortfolioContent = styled.div`
         @media only screen and (max-width: 670px) {
             flex-wrap: wrap;    
         }
+        .fit {
+            background-size: 150%;
+        }
+    }
+    .wrapper4 {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;  
+        align-items: center;
+        @media only screen and (max-width: 670px) {
+            flex-wrap: wrap;    
+        }
+    }
+`
+
+export const PortfolioContent2 = styled.div`
+    display: flex;
+    padding: 40px 240px;
+    flex-wrap: wrap; 
+    justify-content: center;
+    align-items: center;
+    @media only screen and (max-width: 938px) {
+        padding: 40px 50px;      
+    }
+    @media only screen and (max-width: 837px) {
+        padding: 40px 10px;      
+    }
+    .wrapper4 {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;  
+        align-items: center;
+        @media only screen and (max-width: 670px) {
+            flex-wrap: wrap;    
+        }
     }
 `
 
 export const ImageBox = styled.div`
     flex-basis: 31%;
     height: 248px;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
+    background-color: rgb(250, 245, 127);
     position: relative;
     display: flex;
     align-items: center;
@@ -290,29 +386,33 @@ export const ImageBox = styled.div`
     cursor: pointer;
     p {
         margin: 0;
-        font-size: 24px;
-        color: white;
+        font-size: 14px;
+        color: #333;
         font-weight: 700;
         letter-spacing: 2px;
-        position: absolute;
+        text-align: center;
+        margin-bottom: 5px;
+    }
+    span {
+        margin: 0;
+        font-size: 14px;
+        color: #333;
         text-align: center;
     }
     @media only screen and (max-width: 670px) {
-        flex-basis: 48.5%;
+        flex-basis: 100%;
         margin-bottom: 7px; 
+        margin-right: 0px !important;
         height: 200px; 
-        p {
-            font-size: 20px;
-        }
     }
 `
 
 export const ImageBox3 = styled.div`
-    flex-basis: 49.5%;
+    flex-basis: 49.7%;
     height: 601px;
     background-size: cover;
     background-repeat: no-repeat;
-    background-position: center;
+    background-position: bottom;
     position: relative;
     display: flex;
     align-items: center;
@@ -325,26 +425,51 @@ export const ImageBox3 = styled.div`
     }
 `
 
-export const ImageBox5 = styled.div`
-    flex-basis: 48.5%;
-    height: 248px;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
+export const ImageBox3b = styled.div`
+    flex-basis: 49.5%;
+    height: 601px;
+    background-color: rgb(250, 245, 127);
     position: relative;
-    border: 1px solid ${colors.dark};
     display: flex;
     align-items: center;
     justify-content: center;
+    margin-bottom: 7px;
+    cursor: pointer;
+    h1 {
+        color: #333;
+        font-size: 14px;
+        z-index: 9999;
+    }
+    @media only screen and (max-width: 670px) {
+        margin-bottom: 3px;
+        height: 301px;  
+    }
+`
+
+export const ImageBox5 = styled.div`
+    flex-basis: 48.5%;
+    height: 248px;
+    background-color: rgb(250, 245, 127);
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
     margin-bottom: 20px;
     cursor: pointer;
     p {
         margin: 0;
-        font-size: 24px;
-        color: white;
+        font-size: 20px;
+        color: #333;
         font-weight: 700;
         letter-spacing: 2px;
-        position: absolute;
+        text-align: center;
+        margin-bottom: 5px;
+    }
+    span {
+        margin: 0;
+        font-size: 14px;
+        color: #333;
         text-align: center;
     }
     @media only screen and (max-width: 670px) {
@@ -359,10 +484,10 @@ export const ImageBox5 = styled.div`
 
 export const ImageBox4 = styled.div`
     flex-basis: 32.5%;
-    height: 248px;
+    height: 500px;
     background-size: cover;
     background-repeat: no-repeat;
-    background-position: center;
+    background-position: 50%;
     position: relative;
     display: flex;
     align-items: center;

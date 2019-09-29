@@ -9,15 +9,15 @@ function Portfolio(props) {
             <h1 className="title">PORTFOLIO</h1>
             <PortfolioContent>
                 <div className="wrapper">
-                    <ImageBox style={{backgroundImage: `url(${require('../assets/images/fashion.png')})`}} onClick={()=>props.history.push('/portfolio/fashion')}>
+                    <ImageBox onClick={()=>props.history.push('/portfolio/fashion')}>
                         <p>FASHION</p>
                     </ImageBox>
-                    <ImageBox style={{backgroundImage: `url(${require('../assets/images/art.png')})`}}>
+                    <ImageBox onClick={()=>props.history.push('/portfolio/arts')}>
                         <p>ART</p>
                     </ImageBox>
-                    <ImageBox style={{backgroundImage: `url(${require('../assets/images/others.png')})`}} onClick={()=>props.history.push('/portfolio/others')}>
+                    {/* <ImageBox style={{backgroundImage: `url(${require('../assets/images/others.png')})`}} onClick={()=>props.history.push('/portfolio/others')}>
                         <p>OTHER WORKS</p>
-                    </ImageBox>
+                    </ImageBox> */}
                 </div>
             </PortfolioContent>
         </Body>

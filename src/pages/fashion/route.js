@@ -4,8 +4,8 @@ const Fashion_Route = [
         title: 'Design'
     },
     {
-        id: 'collections',
-        title: 'Collections'
+        id: 'illustrations',
+        title: 'Illustrations'
     },
 ];
 

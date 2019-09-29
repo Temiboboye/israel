@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 var navigationColor = {
-    "textColor": "#ED4119",
+    "textColor": "#000",
     "dark": "#4B4B4B"
 }
 
@@ -20,7 +20,7 @@ export const NavContent = styled.div`
     justify-content: space-between;
     a {
         text-decoration: none;
-        color: ${navigationColor.textColor};
+        color: ${props=>props.color};
         font-size: 18px;
     }
     @media only screen and (max-width: 464px) {
@@ -28,18 +28,22 @@ export const NavContent = styled.div`
     }
 `
 
+NavContent.defaultProps = {
+    color: navigationColor.textColor
+}
+
 export const NavContentMobile = styled.div`
     width: inherit;
     height: inherit;
     display: none;
     align-items: center;
     justify-content: space-between;
-    padding: 0 10px;
     .hamburguer {
         position: fixed;
         width: 35px;
         height: 24.82px;
         z-index: 9999999999999;
+        padding: 0 10px;
         cursor: pointer;
     }
     .hamburguer:hover {
@@ -47,7 +51,7 @@ export const NavContentMobile = styled.div`
         animation: zoom 300ms ease-in;
     }
     .lines {
-        background-color: ${navigationColor.textColor};
+        background-color: ${props=>props.color};
         width: 100%;
         height: 5px;
         margin: 5px 0;
@@ -59,9 +63,11 @@ export const NavContentMobile = styled.div`
         height: 24.82px;
         z-index: 9999999999999;
         cursor: pointer;
+        padding: 0 10px;
     }
     .close-hamburguer .lines {
         cursor: pointer;
+        background-color: ${navigationColor.textColor};
     }
     .close-hamburguer>.line-top {
         -webkit-transform: translateY(200%) rotate(45deg);
@@ -80,10 +86,12 @@ export const NavContentMobile = styled.div`
         position: fixed;
         top: 0;
         bottom: 0;
-        padding-top: 100px;
         display: flex;
         flex-direction: column;
         z-index: 999999999;
+        padding: 0 10px;
+        box-sizing: border-box;
+        padding-top: 100px;
         a {
             text-decoration: none;
             color: ${navigationColor.dark};
@@ -112,3 +120,7 @@ export const NavContentMobile = styled.div`
         display: flex;
     }
 `
+
+NavContentMobile.defaultProps = {
+    color: navigationColor.textColor
+}
